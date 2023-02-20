@@ -19,7 +19,9 @@ public class MouseMovement : MonoBehaviour
     {
         mouseX = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
+        
         transform.Rotate(-mouseY,0,0);
         player.Rotate(Vector3.up * mouseX);
+        
     }
 }

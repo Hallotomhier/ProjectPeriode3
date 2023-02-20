@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public float horizontal;
     public float vertical;
     public Vector3 movement;
-    public float movementSpeed = 1f;
+    public float movementSpeed;
     void Start()
     {
         
