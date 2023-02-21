@@ -6,6 +6,7 @@ public class CastRay : MonoBehaviour
 {
     public RaycastHit hit;
     public Transform playerCharacter;
+    public float pickUpTotaal;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -18,10 +19,25 @@ public class CastRay : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E)) 
             {
+                if (hit.transform.CompareTag("PickUp")) 
+                {
+                    Destroy(hit.transform.gameObject);
+                    pickUpTotaal += 1;
+                }
+
+                if (hit.transform.CompareTag("TrapDown")) 
+                {
+                    transform.Translate(0, -5, 0);
+                }
+                
+                
+                
+                
+                
                 if (hit.transform.CompareTag("Trap")) 
                 {
-                    transform.Translate(Vector3.up);
-                    playerCharacter.transform.Translate(Vector3.up);
+                    transform.Translate(0,5,0);
+                    
                 }
             }
         }
