@@ -5,8 +5,11 @@ using UnityEngine;
 public class CastRay : MonoBehaviour
 {
     public RaycastHit hit;
-    public Transform playerCharacter;
     public float pickUpTotaal;
+    public GameObject deur;
+    public Transform player;
+    public float openDoorSpeed;
+    
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -15,7 +18,8 @@ public class CastRay : MonoBehaviour
     
     void Update()
     {
-        if (Physics.Raycast(transform.position , transform.forward, out hit, 5f)) 
+        
+        if (Physics.Raycast(transform.position , transform.forward, out hit, 1f)) 
         {
             if (Input.GetKeyDown(KeyCode.E)) 
             {
@@ -27,18 +31,24 @@ public class CastRay : MonoBehaviour
 
                 if (hit.transform.CompareTag("TrapDown")) 
                 {
-                    transform.Translate(0, -5, 0);
+                    player.transform.Translate(0, -5, 0);
                 }
-                
-                
-                
-                
                 
                 if (hit.transform.CompareTag("Trap")) 
                 {
-                    transform.Translate(0,5,0);
+                    player.transform.Translate(0,5,0);
                     
                 }
+
+                if (hit.transform.CompareTag("Door")) 
+                {
+                    deur.transform.Rotate(0, -90, 0);
+                  
+
+                }
+
+
+
             }
         }
     }

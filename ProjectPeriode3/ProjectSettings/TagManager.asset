@@ -7,6 +7,7 @@ TagManager:
   - Trap
   - PickUp
   - TrapDown
+  - Door
   layers:
   - Default
   - TransparentFX
