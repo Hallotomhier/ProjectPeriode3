@@ -10,6 +10,7 @@ public class CastRay : MonoBehaviour
     public Transform player;
     public float openDoorSpeed;
     
+    
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -40,16 +41,15 @@ public class CastRay : MonoBehaviour
                     
                 }
 
-                if (hit.transform.CompareTag("Door")) 
-                {
-                    deur.transform.Rotate(0, -90, 0);
-                  
+                
 
-                }
-
-
+                
 
             }
         }
     }
+
+
+
+
 }
