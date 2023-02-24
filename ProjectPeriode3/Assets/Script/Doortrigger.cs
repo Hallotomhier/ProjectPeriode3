@@ -5,41 +5,55 @@ using UnityEngine;
 public class Doortrigger : MonoBehaviour
 {
     public float speed;
-    public Vector3 start;
-    
-    
+    public Transform player;
+    public float delay;
+    public float timer;
+    public bool doorIsClosed;
+    public Vector3 startPos;
+
+
     void Start()
     {
-        start = transform.position;
+        doorIsClosed = true;
+        startPos = transform.position;
     }
 
-    
+
     void Update()
     {
-        
-        
+        if (doorIsClosed == false) 
+        {
+            timer += 1 * Time.deltaTime;
+            if(timer >= 3f) 
+            {
+                Debug.Log("delay reset");
+                timer -= timer;
+                CloseDoor();
+                doorIsClosed = true;
+
+            }
+        }
     }
 
 
-    
 
-    void OnTriggerStay(Collider other)
+
+    void OnTriggerExit(Collider player)
     {
-        
+        doorIsClosed = false;
+    }
+
+    void OnTriggerStay(Collider player)
+    {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
-        
     }
 
-    void OnTriggerExit(Collider other) 
+
+    public void CloseDoor() 
     {
-        
-
-
-        transform.position = start;
+        transform.position = startPos;
     }
+
     
-
-
-
 
 }
