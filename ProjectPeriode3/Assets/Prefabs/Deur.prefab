@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3198026975435714630}
   - component: {fileID: 2003669736226389987}
   - component: {fileID: 4335418653876521769}
-  - component: {fileID: 3115826386144783512}
+  - component: {fileID: 5611631880489642405}
+  - component: {fileID: 5377657923243408145}
   m_Layer: 0
   m_Name: Deur
   m_TagString: Untagged
@@ -84,17 +85,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3115826386144783512
-MeshCollider:
+--- !u!65 &5611631880489642405
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2822204711598697212}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6218977487094332863, guid: 6a36d4e331142fd4da2783ba3e595926, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.75852776, y: 1.8777213, z: 1.264384}
+  m_Center: {x: 0.025572777, y: 0.9388604, z: 0.028565407}
+--- !u!114 &5377657923243408145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822204711598697212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb65610a2534fe14695b77c0947b1d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  player: {fileID: 0}
+  delay: 0
+  timer: 0
+  doorIsClosed: 0
+  startPos: {x: 0, y: 0, z: 0}
