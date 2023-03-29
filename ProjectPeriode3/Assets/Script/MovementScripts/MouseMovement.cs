@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class MouseMovement : MonoBehaviour
 {
-    public float mouseX;
-    public float rotateSpeed;
-    public float mouseY;
-    public Transform player;
-    
+    public float mousSens, mouseY, mouseX;
+    public Vector3 dir;
+    public GameObject playerBody;
+
     void Start()
     {
         
@@ -17,10 +16,25 @@ public class MouseMovement : MonoBehaviour
     
     void Update()
     {
-        mouseX = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
-        mouseY = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
-        transform.Rotate(-mouseY,0,0);
-        player.Rotate(Vector3.up * mouseX);
-        
+        mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mousSens;
+        mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mousSens;
+
+        mouseY = Mathf.Clamp(mouseY, -90, 90);
+
+        dir = new Vector3(0, mouseX, 0);
+        playerBody.transform.Rotate(dir * mousSens * Time.deltaTime);
+
+        dir = new Vector3(-mouseY, 0, 0);
+        transform.Rotate(dir * mousSens * Time.deltaTime);
+
+
+
+
+
+
+
+
+
+
     }
 }
