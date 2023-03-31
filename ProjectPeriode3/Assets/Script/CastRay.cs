@@ -9,7 +9,7 @@ public class CastRay : MonoBehaviour
     public GameObject deur;
     public Transform player;
     public float openDoorSpeed;
-    
+    public InventorySystem inventorySystem;
     
     void Start()
     {
@@ -20,13 +20,16 @@ public class CastRay : MonoBehaviour
     void Update()
     {
         
-        if (Physics.Raycast(transform.position , transform.forward, out hit, 1f)) 
+        if (Physics.Raycast(transform.position , transform.forward, out hit, 5f)) 
         {
             if (Input.GetKeyDown(KeyCode.E)) 
             {
-                if (hit.transform.CompareTag("PickUp")) 
+                if (hit.transform.GetComponent("PickupItem")) 
                 {
-                    Destroy(hit.transform.gameObject);
+                    inventorySystem.AddItem(hit.transform.GetComponent<PickupItem>());
+                    //hit.transform.GetComponent<PickupItem>();
+ 
+                    //Destroy(hit.transform.gameObject);
                     pickUpTotaal += 1;
                 }
 
