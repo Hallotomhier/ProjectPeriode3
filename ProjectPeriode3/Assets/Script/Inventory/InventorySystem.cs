@@ -1,7 +1,7 @@
 using UnityEngine;
 using static UnityEditor.Progress;
 
-[CreateAssetMenu(fileName = "Inventory", menuName = "Inventory", order = 1)]
+
 
 public class InventorySystem : MonoBehaviour
 {
