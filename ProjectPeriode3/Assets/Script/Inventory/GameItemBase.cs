@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class GameItemBase : ScriptableObject
 {
-    public string Name;
-    public string Description;
-    public Sprite Icon;
-    public GameObject GameObject;
-
+    public string itemName;
+    public string description;
+    public Sprite icon;
+    public GameObject gameObject;
 }

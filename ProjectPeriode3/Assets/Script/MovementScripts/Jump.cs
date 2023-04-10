@@ -15,7 +15,7 @@ public class Jump : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
         {
             grounded = true;
-            Debug.Log("grounded");
+            //Debug.Log("grounded");
 
         }
         else 

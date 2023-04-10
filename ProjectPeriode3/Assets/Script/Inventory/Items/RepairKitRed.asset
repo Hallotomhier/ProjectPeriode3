@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 607c70e6034e5fb4e95aab68448c9633, type: 3}
-  m_Name: RepairKitBlue
+  m_Name: RepairKitRed
   m_EditorClassIdentifier: 
-  itemName: Blue
-  description: Bluekit
-  icon: {fileID: 21300000, guid: be340a165cb9c8d4cb50f1deeb51d4ea, type: 3}
+  itemName: Red
+  description: Red repair kit!
+  icon: {fileID: 21300000, guid: 3042b019b052942a1baf7aa49d7ca6bb, type: 3}
   gameObject: {fileID: 0}
