@@ -8,6 +8,8 @@ public class CastRay : MonoBehaviour
     public float pickUpTotaal;
     public GameObject deur;
     public Transform player;
+    public Transform level0;
+    public Transform level1;
     public float openDoorSpeed;
     public InventorySystem inventorySystem;
     
@@ -24,6 +26,7 @@ public class CastRay : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E)) 
             {
+                //JASPER
                 if (hit.transform.GetComponent("PickupItem")) 
                 {
                     inventorySystem.AddItem(hit.transform.GetComponent<PickupItem>());
@@ -33,14 +36,16 @@ public class CastRay : MonoBehaviour
                     pickUpTotaal += 1;
                 }
 
+
+                //TOM
                 if (hit.transform.CompareTag("TrapDown")) 
                 {
                     player.transform.Translate(0, -5, 0);
                 }
                 
-                if (hit.transform.CompareTag("Trap")) 
+                if (hit.transform.CompareTag("TrapUp")) 
                 {
-                    player.transform.Translate(0,5,0);
+                    player.transform.Translate(level0.GetComponent<>());
                     
                 }
 
