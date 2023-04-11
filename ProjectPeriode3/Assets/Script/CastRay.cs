@@ -12,7 +12,8 @@ public class CastRay : MonoBehaviour
     public Transform level1;
     public float openDoorSpeed;
     public InventorySystem inventorySystem;
-    
+    public GameObject endscreenUi;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -27,13 +28,21 @@ public class CastRay : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E)) 
             {
                 //JASPER
-                if (hit.transform.GetComponent("PickupItem")) 
+                if (hit.transform.GetComponent("PickupItem"))
                 {
                     inventorySystem.AddItem(hit.transform.GetComponent<PickupItem>());
-                    //hit.transform.GetComponent<PickupItem>();
- 
-                    //Destroy(hit.transform.gameObject);
                     pickUpTotaal += 1;
+                }
+                if (hit.transform.CompareTag("Engine"))
+                {
+                    if (pickUpTotaal == 5) // alle items verzameld
+                    {
+                        endscreenUi.SetActive(true);
+                    }
+                    else // Mist nog items
+                    {
+                        print("missing item");
+                    }
                 }
 
 
@@ -45,7 +54,7 @@ public class CastRay : MonoBehaviour
                 
                 if (hit.transform.CompareTag("TrapUp")) 
                 {
-                    player.transform.Translate(level0.GetComponent<>());
+                    //player.transform.Translate(level0.GetComponent<>());
                     
                 }
 

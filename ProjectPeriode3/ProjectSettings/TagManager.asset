@@ -8,6 +8,7 @@ TagManager:
   - PickUp
   - TrapDown
   - Door
+  - Engine
   layers:
   - Default
   - TransparentFX

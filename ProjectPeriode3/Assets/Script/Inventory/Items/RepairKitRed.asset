@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Red
   description: Red repair kit!
-  icon: {fileID: 21300000, guid: 3042b019b052942a1baf7aa49d7ca6bb, type: 3}
+  icon: {fileID: 21300000, guid: a61bbb5019949e045b21de3dc6f974a4, type: 3}
   gameObject: {fileID: 0}
