@@ -6,11 +6,9 @@ public class CastRay : MonoBehaviour
 {
     public RaycastHit hit;
     public float pickUpTotaal;
-    public GameObject deur;
     public Transform player;
-    public Transform level0;
-    public Transform level1;
-    public float openDoorSpeed;
+    public GameObject hatch;
+    public GameObject ladder;
     public InventorySystem inventorySystem;
     public GameObject endscreenUi;
 
@@ -47,14 +45,14 @@ public class CastRay : MonoBehaviour
 
 
                 //TOM
-                if (hit.transform.CompareTag("TrapDown")) 
+                if (hit.transform.CompareTag("Ladder")) 
                 {
-                    player.transform.Translate(0, -5, 0);
+                    player.transform.position = hatch.transform.position;
                 }
                 
-                if (hit.transform.CompareTag("TrapUp")) 
+                if (hit.transform.CompareTag("Hatch")) 
                 {
-                    //player.transform.Translate(level0.GetComponent<>());
+                    player.transform.position = ladder.transform.position;
                     
                 }
 

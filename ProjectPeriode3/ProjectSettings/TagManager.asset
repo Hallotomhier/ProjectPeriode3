@@ -9,6 +9,8 @@ TagManager:
   - TrapDown
   - Door
   - Engine
+  - Hatch
+  - Ladder
   layers:
   - Default
   - TransparentFX

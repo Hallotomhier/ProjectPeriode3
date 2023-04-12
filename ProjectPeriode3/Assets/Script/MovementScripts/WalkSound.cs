@@ -23,36 +23,28 @@ public class WalkSound : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             footstep.Play();
-        }
-        else 
-        {
-            footstep.Stop();
-        }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            footstep.Play();
+            if (Input.GetKey(KeyCode.A)) 
+            {
+                footstep.Play();
+                
+                if (Input.GetKey(KeyCode.S)) 
+                {
+                    footstep.Play();
+
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        footstep.Play();
+                    }
+                    else 
+                    {
+                        footstep.Stop();
+                    }
+                
+                }
+            }
         }
-        else
-        {
-            footstep.Stop();
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            footstep.Play();
-        }
-        else
-        {
-            footstep.Stop();
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            footstep.Play();
-        }
-        else
-        {
-            footstep.Stop();
-        }
+        
 
     }
 }
