@@ -1958,6 +1958,7 @@ GameObject:
   - component: {fileID: 8659489481485298398}
   - component: {fileID: 8659489481485298371}
   - component: {fileID: 8659489481485298370}
+  - component: {fileID: 1105864647071137996}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -2013,7 +2014,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 9061d6c7c78a0ff4191a31584a0c2d5b, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2101,6 +2102,20 @@ MonoBehaviour:
   ladder: {fileID: 0}
   inventorySystem: {fileID: 0}
   endscreenUi: {fileID: 0}
+--- !u!114 &1105864647071137996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659489481485298396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab2350c1656aa04f82121c6998a57f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam1: {fileID: 0}
+  cam2: {fileID: 0}
 --- !u!1 &9050901999941864423
 GameObject:
   m_ObjectHideFlags: 0

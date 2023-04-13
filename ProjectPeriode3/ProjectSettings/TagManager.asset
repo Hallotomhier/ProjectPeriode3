@@ -11,6 +11,8 @@ TagManager:
   - Engine
   - Hatch
   - Ladder
+  - TV1
+  - TV2
   layers:
   - Default
   - TransparentFX
