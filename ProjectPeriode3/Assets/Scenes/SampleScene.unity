@@ -2768,11 +2768,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpTotaal: 0
-  deur: {fileID: 1416298951}
   player: {fileID: 1317123594}
-  level0: {fileID: 0}
-  level1: {fileID: 0}
-  openDoorSpeed: 10
+  hatch: {fileID: 0}
+  ladder: {fileID: 0}
   inventorySystem: {fileID: 330585550}
   endscreenUi: {fileID: 47198336}
 --- !u!114 &330585550
@@ -3427,10 +3425,10 @@ RectTransform:
   m_Father: {fileID: 1865333621}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0.000061035156}
-  m_SizeDelta: {x: 1920, y: 951}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422316590
 MonoBehaviour:
@@ -14120,18 +14118,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804531109}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -9.094947e-13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 422316589}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 154.75037, y: -919.1847}
-  m_SizeDelta: {x: 309.335, y: 63.6326}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 309.335, y: 63.63257}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1804531111
 MonoBehaviour:
   m_ObjectHideFlags: 0
