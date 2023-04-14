@@ -7,7 +7,6 @@ public class PickupItem : MonoBehaviour
 
     public GameItemBase Pickup()
     {
-        // returns the item type and destroys the game object
         Destroy(gameObject);
 
         print("Picked Up :) " + item.itemName);

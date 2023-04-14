@@ -5,7 +5,7 @@ using UnityEngine;
 public class CastRay : MonoBehaviour
 {
     public RaycastHit hit;
-    public float pickUpTotaal;
+    public int pickUpTotal;
     public Transform player;
     public GameObject hatch;
     public GameObject ladder;
@@ -21,7 +21,7 @@ public class CastRay : MonoBehaviour
     void Update()
     {
         
-        if (Physics.Raycast(transform.position , transform.forward, out hit, 5f)) 
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 5f)) 
         {
             if (Input.GetKeyDown(KeyCode.E)) 
             {
@@ -29,15 +29,15 @@ public class CastRay : MonoBehaviour
                 if (hit.transform.GetComponent("PickupItem"))
                 {
                     inventorySystem.AddItem(hit.transform.GetComponent<PickupItem>());
-                    pickUpTotaal += 1;
+                    pickUpTotal += 1;
                 }
                 if (hit.transform.CompareTag("Engine"))
                 {
-                    if (pickUpTotaal == 5) // alle items verzameld
+                    if (pickUpTotal == 5) // alle items verzameld
                     {
                         endscreenUi.SetActive(true);
                     }
-                    else // Mist nog items
+                    else // Mist nog items voor engine
                     {
                         print("missing item");
                     }
