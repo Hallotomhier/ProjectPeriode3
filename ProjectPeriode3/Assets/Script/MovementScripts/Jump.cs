@@ -18,16 +18,19 @@ public class Jump : MonoBehaviour
             //Debug.Log("grounded");
 
         }
+        
         else 
         {
             grounded = false;
         }
+        
         if (grounded == true) 
         {
             if (Input.GetKeyDown(KeyCode.Space)) 
             {
                 rb.AddForce(Vector3.up * force, ForceMode.Impulse);
             }
+            //Impulse verandering van snelheid in korte tijd 
             
 
 

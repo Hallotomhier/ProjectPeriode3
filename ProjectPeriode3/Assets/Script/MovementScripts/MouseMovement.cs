@@ -32,16 +32,6 @@ public class MouseMovement : MonoBehaviour
         clampY.x = -rotY;
         transform.eulerAngles = clampY;
 
-
-
-
-
-
-
-
-
-
-
-
+        //eulur angels = 
     }
 }

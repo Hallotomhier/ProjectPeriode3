@@ -15322,7 +15322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 57.21997}
   m_SizeDelta: {x: 309.335, y: 63.63257}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &420691910
@@ -15345,7 +15345,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press ''i'' to open inventory
+  m_text: 'Press ''F6'' to load
+
+    Press ''F5'' to save
+
+    Press ''i'' to open
+    inventory
 
     Press ''e'' to interact'
   m_isRightToLeft: 0

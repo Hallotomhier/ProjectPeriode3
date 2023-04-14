@@ -6,7 +6,7 @@ public class SaveLoadData : MonoBehaviour
 {
     public int i;
 
-    public void SavePlayer()
+    public void SavePlayer() 
     {
         PlayerPrefs.SetFloat(i.ToString() + "PlayerX", transform.position.x);
         PlayerPrefs.SetFloat(i.ToString() + "PlayerY", transform.position.y);
